@@ -32,7 +32,7 @@
 
 1. Clone o projeto: Inicialmente, clone o projeto do repositório Git para sua máquina local usando o seguinte comando:
    ```
-   git clone https://github.com/seu-usuario/bookcatalog.git
+   git clone https://github.com/Benjamim-EP/Springboot-CRUD
    ```
 
 2. Importe o projeto: Abra sua IDE preferida (por exemplo, IntelliJ IDEA, Eclipse) e importe o projeto como um projeto Maven existente.
