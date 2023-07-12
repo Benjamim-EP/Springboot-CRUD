@@ -16,8 +16,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_product")
-public class Product implements Serializable {
+@Table(name = "tb_book")
+public class Book implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -34,15 +34,15 @@ public class Product implements Serializable {
 	private Instant date;
 	
 	@ManyToMany
-	@JoinTable(name = "tb_product_category",
-		joinColumns = @JoinColumn(name = "product_id"),
+	@JoinTable(name = "tb_book_category",
+		joinColumns = @JoinColumn(name = "book_id"),
 		inverseJoinColumns = @JoinColumn(name = "category_id"))	
 	Set<Category> categories = new HashSet<>();
 	
-	public Product() {
+	public Book() {
 	}
 
-	public Product(Long id, String name, String description, Double price, String imgUrl, Instant date) {
+	public Book(Long id, String name, String description, Double price, String imgUrl, Instant date) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
@@ -119,7 +119,7 @@ public class Product implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Product other = (Product) obj;
+		Book other = (Book) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

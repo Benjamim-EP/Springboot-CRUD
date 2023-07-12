@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Set;
 
 import com.devsuperior.dscatalog.entities.Category;
-import com.devsuperior.dscatalog.entities.Product;
+import com.devsuperior.dscatalog.entities.Book;
 
-public class ProductDTO implements Serializable{
+public class BookDTO implements Serializable{
     private static final long serialVersionUID = 1L;
 
     private Long id;
@@ -21,10 +21,10 @@ public class ProductDTO implements Serializable{
 
     private List<CategoryDTO> categories = new ArrayList<>();
 
-    public ProductDTO(){
+    public BookDTO(){
     }
 
-    public ProductDTO(Long id, String name, String description, Double price, String imgURL, Instant date) {
+    public BookDTO(Long id, String name, String description, Double price, String imgURL, Instant date) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -33,7 +33,7 @@ public class ProductDTO implements Serializable{
         this.date = date;
     }    
 
-     public ProductDTO(Product entity) {
+     public BookDTO(Book entity) {
         this.id = entity.getId();
         this.name = entity.getName();
         this.description = entity.getDescription();
@@ -42,7 +42,7 @@ public class ProductDTO implements Serializable{
         this.date = entity.getDate();
     } 
 
-    public ProductDTO(Product entity, Set<Category> categories){
+    public BookDTO(Book entity, Set<Category> categories){
         this(entity);
         categories.forEach(cat -> this.categories.add(new CategoryDTO(cat)));
     }
