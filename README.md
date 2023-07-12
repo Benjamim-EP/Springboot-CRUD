@@ -28,7 +28,7 @@
 
 3. Banco de dados: O projeto utiliza o banco de dados H2 para desenvolvimento e teste. Certifique-se de ter o H2 Database instalado ou configure seu próprio banco de dados PostgreSQL.
 
-## **Setup do ambiente:**
+### **Setup do ambiente:**
 
 1. Clone o projeto: Inicialmente, clone o projeto do repositório Git para sua máquina local usando o seguinte comando:
    ```
@@ -41,7 +41,7 @@
 
 4. Configuração do banco de dados (opcional): Se você preferir usar o banco de dados PostgreSQL em vez do H2, atualize as configurações de conexão do banco de dados no arquivo `application.properties` ou `application.yml` do projeto.
 
-## **Como rodar na minha máquina?**
+### **Como rodar na minha máquina?**
 
 1. Execute o aplicativo: A partir da sua IDE, localize a classe principal `bookcatalogApplication` e execute-a como uma aplicação Java. Isso iniciará o servidor embutido do Spring Boot e implantará o projeto.
 
