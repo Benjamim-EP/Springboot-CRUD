@@ -1,11 +1,11 @@
 # Springboot-CRUD
-# Documentação da API
+## Documentação da API
 
 A seguir está a documentação da API para os recursos disponíveis.
 
-## Books
+### Books
 
-### Listar todos os livros
+#### Listar todos os livros
 
 Retorna uma lista paginada de todos os livros.
 
@@ -23,7 +23,7 @@ Exemplo de requisição:
 GET /books/all?page=0&linesPerPage=12&direction=ASC&orderBy=name
 ```
 
-### Buscar livro por ID
+#### Buscar livro por ID
 
 Retorna os detalhes de um livro específico com base no ID.
 
@@ -38,7 +38,7 @@ Exemplo de requisição:
 GET /books/123
 ```
 
-### Inserir um novo livro
+#### Inserir um novo livro
 
 Insere um novo livro na base de dados.
 
@@ -58,7 +58,7 @@ POST /books
 }
 ```
 
-### Atualizar livro existente
+#### Atualizar livro existente
 
 Atualiza os dados de um livro existente com base no ID.
 
@@ -80,7 +80,7 @@ PUT /books/123
 }
 ```
 
-### Excluir livro
+#### Excluir livro
 
 Exclui um livro da base de dados com base no ID.
 
@@ -95,9 +95,9 @@ Exemplo de requisição:
 DELETE /books/123
 ```
 
-## Categorias
+### Categorias
 
-### Listar todas as categorias
+#### Listar todas as categorias
 
 Retorna uma lista paginada de todas as categorias.
 
@@ -115,7 +115,7 @@ Exemplo de requisição:
 GET /categorias/all?page=0&linesPerPage=12&direction=ASC&orderBy=name
 ```
 
-### Buscar categoria por ID
+#### Buscar categoria por ID
 
 Retorna os detalhes de uma categoria específica com base no ID.
 
@@ -130,7 +130,7 @@ Exemplo de requisição:
 GET /categorias/123
 ```
 
-### Inserir uma nova categoria
+#### Inserir uma nova categoria
 
 Insere uma nova categoria na base de dados.
 
@@ -148,7 +148,7 @@ POST /categorias
 }
 ```
 
-### Atualizar categoria existente
+#### Atualizar categoria existente
 
 Atualiza os dados de uma categoria existente com base no ID.
 
@@ -168,7 +168,7 @@ PUT /categorias/123
 }
 ```
 
-### Excluir categoria
+#### Excluir categoria
 
 Exclui uma categoria da base de dados com base no ID.
 
