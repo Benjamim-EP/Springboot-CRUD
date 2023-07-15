@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.resources;
+package com.bookCatalog.bookcatalog.resources;
 
 import java.net.URI;
 
@@ -9,6 +9,10 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import com.bookCatalog.bookcatalog.dto.BookDTO;
+import com.bookCatalog.bookcatalog.services.BookService;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,9 +21,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.devsuperior.dscatalog.dto.BookDTO;
-import com.devsuperior.dscatalog.services.BookService;
 
 @RestController
 @RequestMapping(value = "/books")

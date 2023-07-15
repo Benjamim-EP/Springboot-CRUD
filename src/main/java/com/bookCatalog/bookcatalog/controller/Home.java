@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.controller;
+package com.bookCatalog.bookcatalog.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

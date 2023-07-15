@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.resources.exceptions;
+package com.bookCatalog.bookcatalog.resources.exceptions;
 
 import java.time.Instant;
 

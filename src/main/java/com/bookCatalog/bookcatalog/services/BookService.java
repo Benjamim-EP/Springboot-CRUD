@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.services;
+package com.bookCatalog.bookcatalog.services;
 
 import java.util.Optional;
 
@@ -12,14 +12,14 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.dscatalog.dto.CategoryDTO;
-import com.devsuperior.dscatalog.dto.BookDTO;
-import com.devsuperior.dscatalog.entities.Category;
-import com.devsuperior.dscatalog.entities.Book;
-import com.devsuperior.dscatalog.repositories.CategoryRepository;
-import com.devsuperior.dscatalog.repositories.BookRepository;
-import com.devsuperior.dscatalog.services.exceptions.DatabaseException;
-import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
+import com.bookCatalog.bookcatalog.dto.BookDTO;
+import com.bookCatalog.bookcatalog.dto.CategoryDTO;
+import com.bookCatalog.bookcatalog.entities.Book;
+import com.bookCatalog.bookcatalog.entities.Category;
+import com.bookCatalog.bookcatalog.repositories.BookRepository;
+import com.bookCatalog.bookcatalog.repositories.CategoryRepository;
+import com.bookCatalog.bookcatalog.services.exceptions.DatabaseException;
+import com.bookCatalog.bookcatalog.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class BookService {

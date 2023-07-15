@@ -1,4 +1,4 @@
-package com.devsuperior.dscatalog.entities;
+package com.bookCatalog.bookcatalog.entities;
 
 import java.io.Serializable;
 
@@ -28,6 +28,7 @@ public class Category implements Serializable {
 
     @Override
     public int hashCode() {
+    
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
