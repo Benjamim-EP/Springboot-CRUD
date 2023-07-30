@@ -1,4 +1,193 @@
 # Springboot-CRUD
+## Documentação da API
+
+A seguir está a documentação da API para os recursos disponíveis.
+
+### Books
+
+#### Listar todos os livros
+
+Retorna uma lista paginada de todos os livros.
+
+- **URL**: `/books/all`
+- **Método**: GET
+- **Parâmetros de consulta**:
+  - `page` (opcional): Número da página (padrão: 0)
+  - `linesPerPage` (opcional): Número de livros por página (padrão: 12)
+  - `direction` (opcional): Direção de ordenação dos resultados (ASC ou DESC) (padrão: ASC)
+  - `orderBy` (opcional): Campo utilizado para ordenação (padrão: name)
+- **Retorno**: Retorna uma lista paginada de livros no corpo da resposta.
+
+Exemplo de requisição:
+```
+GET /books/all?page=0&linesPerPage=12&direction=ASC&orderBy=name
+```
+
+#### Buscar livro por ID
+
+Retorna os detalhes de um livro específico com base no ID.
+
+- **URL**: `/books/{id}`
+- **Método**: GET
+- **Parâmetros de URL**:
+  - `id`: ID do livro
+- **Retorno**: Retorna os detalhes do livro no corpo da resposta.
+
+Exemplo de requisição:
+```
+GET /books/123
+```
+
+#### Inserir um novo livro
+
+Insere um novo livro na base de dados.
+
+- **URL**: `/books`
+- **Método**: POST
+- **Corpo da solicitação**: Deve conter os dados do livro a ser inserido.
+- **Retorno**: Retorna os detalhes do livro recém-inserido no corpo da resposta, juntamente com o cabeçalho "Location" contendo o URL para acessar os detalhes do livro.
+
+Exemplo de requisição:
+```
+POST /books
+
+{
+  "title": "Livro 1",
+  "author": "Autor 1",
+  "year": 2023
+}
+```
+
+#### Atualizar livro existente
+
+Atualiza os dados de um livro existente com base no ID.
+
+- **URL**: `/books/{id}`
+- **Método**: PUT
+- **Parâmetros de URL**:
+  - `id`: ID do livro a ser atualizado
+- **Corpo da solicitação**: Deve conter os novos dados do livro.
+- **Retorno**: Retorna os detalhes do livro atualizado no corpo da resposta.
+
+Exemplo de requisição:
+```
+PUT /books/123
+
+{
+  "title": "Livro Atualizado",
+  "author": "Autor Atualizado",
+  "year": 2022
+}
+```
+
+#### Excluir livro
+
+Exclui um livro da base de dados com base no ID.
+
+- **URL**: `/books/{id}`
+- **Método**: DELETE
+- **Parâmetros de URL**:
+  - `id`: ID do livro a ser excluído
+- **Retorno**: Retorna uma resposta vazia com o código de status 204 (No Content) em caso de sucesso.
+
+Exemplo de requisição:
+```
+DELETE /books/123
+```
+
+### Categorias
+
+#### Listar todas as categorias
+
+Retorna uma lista paginada de todas as categorias.
+
+- **URL**: `/categorias/all`
+- **Método**: GET
+- **Parâmetros de consulta**:
+  - `page` (opcional): Número da página (padrão: 0)
+  - `linesPerPage` (opcional): Número de categorias por página (padrão: 12)
+  - `direction` (opcional): Direção de ordenação dos resultados (ASC ou DESC) (padrão: ASC)
+  - `orderBy` (opcional): Campo utilizado para ordenação (padrão: name)
+- **Retorno**: Retorna uma lista paginada de categorias no corpo da resposta.
+
+Exemplo de requisição:
+```
+GET /categorias/all?page=0&linesPerPage=12&direction=ASC&orderBy=name
+```
+
+#### Buscar categoria por ID
+
+Retorna os detalhes de uma categoria específica com base no ID.
+
+- **URL**: `/categorias/{id}`
+- **Método**: GET
+- **Parâmetros de URL**:
+  - `id`: ID da categoria
+- **Retorno**: Retorna os detalhes da categoria no corpo da resposta.
+
+Exemplo de requisição:
+```
+GET /categorias/123
+```
+
+#### Inserir uma nova categoria
+
+Insere uma nova categoria na base de dados.
+
+- **URL**: `/categorias`
+- **Método**: POST
+- **Corpo da solicitação**: Deve conter os dados da categoria a ser inserida.
+- **Retorno**: Retorna os detalhes da categoria recém-inserida no corpo da resposta, juntamente com o cabeçalho "Location" contendo o URL para acessar os detalhes da categoria.
+
+Exemplo de requisição:
+```
+POST /categorias
+
+{
+  "name": "Categoria 1"
+}
+```
+
+#### Atualizar categoria existente
+
+Atualiza os dados de uma categoria existente com base no ID.
+
+- **URL**: `/categorias/{id}`
+- **Método**: PUT
+- **Parâmetros de URL**:
+  - `id`: ID da categoria a ser atualizada
+- **Corpo da solicitação**: Deve conter os novos dados da categoria.
+- **Retorno**: Retorna os detalhes da categoria atualizada no corpo da resposta.
+
+Exemplo de requisição:
+```
+PUT /categorias/123
+
+{
+  "name": "Categoria Atualizada"
+}
+```
+
+#### Excluir categoria
+
+Exclui uma categoria da base de dados com base no ID.
+
+- **URL**: `/categorias/{
+
+id}`
+- **Método**: DELETE
+- **Parâmetros de URL**:
+  - `id`: ID da categoria a ser excluída
+- **Retorno**: Retorna uma resposta vazia com o código de status 204 (No Content) em caso de sucesso.
+
+Exemplo de requisição:
+```
+DELETE /categorias/123
+```
+
+Lembre-se de substituir `localhost` pelo endereço do servidor onde a API está hospedada.
+
+Certifique-se de fornecer exemplos adicionais de payload e parâmetros de solicitação conforme necessário.
 
 ## Estrutura do projeto
 ![estrutura dos arquivos](tree.png)
