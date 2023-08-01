@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 import com.bookCatalog.bookcatalog.entities.Category;
 
+/*
+ * A classe DTO,é usada para transferir dados entre camadas de um aplicativo ou para expor informações específicas para consumo externo.
+ */
+
 public class CategoryDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 

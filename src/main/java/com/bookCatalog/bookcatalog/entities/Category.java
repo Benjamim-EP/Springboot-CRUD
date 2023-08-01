@@ -8,6 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*
+ * A classe de entidade geralmente representa uma tabela no banco de dados e contém informações e comportamentos relacionados a essa tabela. 
+ * 
+ */
+
 @Entity
 @Table(name = "tb_category")
 public class Category implements Serializable {

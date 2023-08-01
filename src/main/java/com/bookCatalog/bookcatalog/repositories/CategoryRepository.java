@@ -12,7 +12,6 @@ import com.bookCatalog.bookcatalog.entities.Category;
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
     
-    // Não há métodos adicionais a serem documentados neste repositório.
     // Os métodos básicos de CRUD (create, read, update, delete) são herdados
     // automaticamente do JpaRepository e não requerem documentação adicional.
 }
